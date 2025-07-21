@@ -1,3 +1,5 @@
+from logging import exception
+
 print("Building calculator project")
 
 def add(num1,num2):
@@ -32,8 +34,10 @@ try:
         print(f"Division of {firstNumber} and {secondNumber} is equal "+ str(division(firstNumber,secondNumber)))
     else:
         print("Select valid choice ")
+except ZeroDivisionError:
+    print("division by zero")
 except:
-    print("input right number")
+    print("Something went wrong")
 
 
 
